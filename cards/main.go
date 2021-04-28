@@ -8,11 +8,23 @@ func main() {
 
 	//cards := deck{"Teste", "Teste2"}
 
-	cards := newDeck()
+	// cards := newDeck()
 
-	hand, remaining := deal(cards, 5)
+	// hand, remaining := deal(cards, 5)
 
-	hand.print()
-	println("")
-	remaining.print()
+	// hand.print()
+	// println("")
+	// remaining.print()
+
+	// cards := newDeck()
+	// fmt.Println(cards.toString())
+
+	// cards.export("cards.txt")
+
+	// cards := newDeckFromFile("cards.txt")
+	// fmt.Println(cards.toString())
+
+	// cards := newDeck()
+	// cards.shuffle()
+	// cards.print()
 }
