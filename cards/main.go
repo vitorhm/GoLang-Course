@@ -1,16 +1,18 @@
 package main
 
-import "fmt"
-
 func main() {
 	// var card string = "Meu Card"
-	card := "Meu Card"
-	card = "Updating Card"
-	card = test()
+	// card := "Meu Card"
+	// card = "Updating Card"
+	// card = test()
 
-	fmt.Println(card)
-}
+	//cards := deck{"Teste", "Teste2"}
 
-func test() string {
-	return "Test String"
+	cards := newDeck()
+
+	hand, remaining := deal(cards, 5)
+
+	hand.print()
+	println("")
+	remaining.print()
 }
