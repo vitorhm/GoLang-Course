@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type contactInfo struct {
 	phone   string
 	zipCode string
@@ -8,18 +10,27 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
 }
 
 func main() {
 	v := person{
 		firstName: "Vitor",
 		lastName:  "Messias",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			phone:   "13",
 			zipCode: "13",
 		},
 	}
 
-	println(v)
+	v.updateName("Tais")
+	v.print()
+}
+
+func (p *person) updateName(name string) {
+	p.firstName = name
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }
